@@ -13,23 +13,35 @@
 </head>
 <body>
 
-<div class="container">
-  <h1>Pomodoro Clock!</h1>
+<div class="container text-center">
+  <h1>Pomodoro!</h1>
 
-  <div id="timer">
-    <h2 id="sessionTime">Session Time</h2>
-    <a href="#" class="btn btn-primary" id="sub5Session"></a>
-    <h2 id="sessionNum">5</h2>
-    <a href="#" class="btn btn-primary" id="add5Session">+</a>
-    <a href="#" class="btn btn-primary" id="reset">Reset</a>
+  <div class="row">
+    <div id="break" class="col-md-6">
+      <h1 id="breakTime">Break Length</h1>
+      <a href="#" class="btn btn-primary" id="sub5Break">-</a>
+      <h2 id="breakNum">5</h2>
+      <a href="#" class="btn btn-primary" id="add5Break">+</a>
+    </div>
+
+    <!-- <div id="triangle" class="col-md-4"></div> -->
+
+    <div id="timer" class="col-md-6">
+      <h1 id="sessionTime">Session Length</h1>
+      <a href="#" class="btn btn-primary" id="sub5Session">-</a>
+      <h2 id="sessionNum">5</h2>
+      <a href="#" class="btn btn-primary" id="add5Session">+</a>
+      <a href="#" class="btn btn-primary" id="reset">Reset</a>
+    </div>
   </div>
 
-  <div id="break">
-    <h2 id="breakTime">Break Time</h2>
-    <a href="#" class="btn btn-primary" id="sub5Break"></a>
-    <h2 id="breakNum">5</h2>
-    <a href="#" class="btn btn-primary" id="add5Break">+</a>
+  <div class="row">
+    <div id="clock">
+      <!-- <p class="text-center">20:00</p> -->
+    </div>
   </div>
+
+
   <a href="#" class="btn btn-primary" id="start">Start</a>
 </div>
 
