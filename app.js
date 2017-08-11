@@ -16,14 +16,22 @@ $(document).ready(function() {
       sessionCount -= 1;
       if(sessionCount === 0) {
         clearInterval(counter);
-        breakTime();
-
+        var startBreak = setInterval(breakTime, 500);
       }
-
       $("#time_clock").html(sessionCount);
+
+      function breakTime() {
+        $("#work_time").hide();
+        $("#relax_time").show();
+        breakCount -= 1;
+        if(breakCount === 0) {
+          clearInterval(startBreak);
+        }
+
+        $("#time_clock").html(breakCount);
+      }
     }
   });
-
 
   $("#subtract_session").click(function() {
     if(sessionCount > 5) {
@@ -51,15 +59,6 @@ $(document).ready(function() {
     breakCount += 1;
     $("#break_time").html(breakCount);
   });
-
-  function breakTime() {
-
-    $("#work_time").hide();
-    $("#relax_time").show();
-    $("#time_clock").html(breakCount);
-  }
-
-
 
 
 });
